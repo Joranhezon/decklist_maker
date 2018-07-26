@@ -1,0 +1,17 @@
+language: python
+
+python: "3.5.2"
+
+sudo: required
+
+env:
+  DJANGO=2.0.7
+
+#Install dependencies
+install:
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
+
+#Runs tests
+script:
+  ./manage.py test
